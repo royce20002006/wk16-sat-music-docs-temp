@@ -101,166 +101,168 @@ Test this in Postman or by using `fetch` in the browser.
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: 'GET'
+- URL:  '/artists/:artistId'
+- Headers: false
+- Body: false
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: name true id true albums true
 
 ### Add an artist
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: post
+- URL:  /artists
+- Headers:  content-type application/json
+- Body: {"name":"yes"}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  201
+- Headers:  content-type application/json
+- Body: {name: yes, id: yes}
 
 ### Edit a specified artist by artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: put
+- URL:  /artists/:id
+- Headers:  content-type application/json
+- Body: {name: yes}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: {name: yes, id: yes, updatedAt, yes}
 
 ### Delete a specified artist by artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: 'delete'
+- URL:  '/artists/:artistId
+- Headers:  none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code: 200
+- Headers:  CONTEnt-type application-json
+- Body: {"message":"Sucessfully deleted"}
 
 ### Get all albums of a specific artist based on artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: GET
+- URL:  /artists/:artistId/albums
+- Headers:  none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: [{"name":"Stadium Arcadium","albumId":1,"artistId":1}]
 
 ### Get a specific album's details based on albumId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: get
+- URL:  /albums/:id
+- Headers:  none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: {name: yes, albumId: yes, artistId: yes, songs: ["name": yes, lyrics: yes, albumId: yes]}
 
 ### Add an album to a specific artist based on artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: post
+- URL:  /artists/artistId/albums
+- Headers:  content-type application/json
+- Body: {name true}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  201
+- Headers:  content-type application/json
+- Body: {name: yes, albumId: yes, artistId: yes}
 
 ### Edit a specified album by albumId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: put
+- URL:  /albums/:id
+- Headers:  content-type application/json
+- Body: {name: true}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: {
+  {"name":yes,"albumId":yes,"artistId":yes,"updatedAt":yes}
+}
 
 ### Delete a specified album by albumId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: delete
+- URL:  /albums/:id
+- Headers: none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: {message: true}
 
 ### Get all songs of a specific artist based on artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: GET
+- URL:  /artist/:artistId/songs
+- Headers:  none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body:[{name yes, lyrics yes, tracknumber yes, songid yes, albumid yes }]
 
 ### Get all songs of a specific album based on albumId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: get
+- URL:  /albums/:aID/songs 
+- Headers:  none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: [{ name true, lyrics true, tracknumber yes, songid yes, albumid yes}]
 
 ### Get all songs of a specified trackNumber
 
@@ -278,75 +280,75 @@ constrained by for this endpoint?
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: get
+- URL:  /trackNumbers/:trackNumber/songs
+- Headers: none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code: 200
+- Headers: content-type application/json
+- Body: [{name yes, lyrics yes, tracknumber yes, songid yes, albumid yes}]
 
 ### Get a specific song's details based on songId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: get
+- URL:  /songs/:songid
+- Headers:  none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: {name yes, lyrics yes, tracnumber yes, songid yes, albumid yes, album yes}
 
 ### Add a song to a specific album based on albumId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: post
+- URL:  /albums/:albumId/songs
+- Headers:  content-type: application/json
+- Body: {name yes, lyrics: yes, tracnumber: yes, artistid yes}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  201
+- Headers:  content-type application/json
+- Body: {name yes, lyrics yes, tracknumber yes, songid yes, albumid yes}
 
 ### Edit a specified song by songId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: put
+- URL:  /songs/:songid
+- Headers:  content-type application/json
+- Body: {name, lyrics, tracknumber,albumid}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type: application/json
+- Body: {name lyrics tracknumber, songid, albumid, updatedat}
 
 ### Delete a specified song by songId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: delete
+- URL:  /songs/songid
+- Headers:  none
+- Body: none
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:  200
+- Headers:  content-type application/json
+- Body: message
 
 [http://localhost:5000]: http://localhost:5000
