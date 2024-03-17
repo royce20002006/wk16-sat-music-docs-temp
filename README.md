@@ -119,7 +119,7 @@ Request components:
 - Method:
 - URL:
 - Headers:
-- Body:
+- Body:9
 
 Response components:
 
