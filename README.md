@@ -295,7 +295,7 @@ Response components:
 
 Request components:
 
-- Method: get
+- Method: ge
 - URL:  /songs/:songid
 - Headers:  none
 - Body: none
